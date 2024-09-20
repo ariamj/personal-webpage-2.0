@@ -7,25 +7,25 @@ import ProjectGIF from '../assets/img/bubbles_animated.GIF'
 /*  Carousal style referenced from:  https://codepen.io/team/keyframers/pen/rNxmVZN?editors=0100 */
 const slides = [
     {
-        title: "Slide 1",
+        title: "Project 1",
         subtitle: "subtitle 1",
         description: "description 1",
         image: ProjectImage
     },
     {
-        title: "Slide 2",
+        title: "Project 2",
         subtitle: "subtitle 2",
         description: "description 2",
         image: ProjectGIF
     },
     {
-        title: "Slide 3",
+        title: "Project 3",
         subtitle: "subtitle 3",
         description: "description 3",
         image: ProjectImage
     },
     {
-        title: "Slide 4",
+        title: "Project 4",
         subtitle: "subtitle 4",
         description: "description 4",
         image: ProjectGIF
