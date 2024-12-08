@@ -60,16 +60,19 @@ body {
         }
 
         &:first-child {
-            left: -50%;
+            /* left: -50%; */
+            left: 17%;
         }
         &:last-child {
-            right: -50%;
+            /* right: -50%; */
+            right: 17%;
         }
     }
 }
 
 .slide {
-
+    display: flex;
+    justify-content: center;
 }
 
 .slideContent {

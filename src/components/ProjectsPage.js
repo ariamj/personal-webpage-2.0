@@ -4,28 +4,30 @@ import ProjectCard from "./ProjectCard";
 import ProjectImage from '../assets/img/bubbles_static.png'
 import ProjectGIF from '../assets/img/bubbles_animated.GIF'
 
+import { Image } from 'antd'
+
 /*  Carousal style referenced from:  https://codepen.io/team/keyframers/pen/rNxmVZN?editors=0100 */
 const slides = [
     {
-        title: "Project 1",
+        title: "Harmonic Hustle",
         subtitle: "subtitle 1",
         description: "description 1",
         image: ProjectImage
     },
     {
-        title: "Project 2",
+        title: "Big 2",
         subtitle: "subtitle 2",
         description: "description 2",
         image: ProjectGIF
     },
     {
-        title: "Project 3",
+        title: "Gallery Manager",
         subtitle: "subtitle 3",
         description: "description 3",
         image: ProjectImage
     },
     {
-        title: "Project 4",
+        title: "Insight UBC",
         subtitle: "subtitle 4",
         description: "description 4",
         image: ProjectGIF
