@@ -4,6 +4,7 @@ import ProjectCard from "./ProjectCard";
 import { Button } from 'antd'
 import ProjectImage from '../assets/img/bubbles_static.png'
 import ProjectGIF from '../assets/img/bubbles_animated.GIF'
+import Spade from '../assets/img/2S.jpg'
 
 import { Image } from 'antd'
 
@@ -13,25 +14,29 @@ const slides = [
         title: "Harmonic Hustle",
         subtitle: "A Rythm Game",
         description: "description 1",
-        image: ProjectImage
+        image: ProjectImage,
+        color: "white",
     },
     {
         title: "Big 2",
-        subtitle: "subtitle 2",
+        subtitle: "An Alternate Version",
         description: "description 2",
-        image: ProjectGIF
+        image: Spade,
+        color: "black",
     },
     {
         title: "Gallery Manager",
         subtitle: "subtitle 3",
         description: "description 3",
-        image: ProjectImage
+        image: ProjectImage,
+        color: "white",
     },
     {
         title: "Insight UBC",
         subtitle: "subtitle 4",
         description: "description 4",
-        image: ProjectGIF
+        image: ProjectGIF,
+        color: "white",
     },
 ]
 
@@ -101,11 +106,12 @@ function Slide({slide, offset}) {
         <div ref={ref} className="slide" data-active={active} style={{"--offset": offset, "--dir": offset === 0 ? 0 : offset > 0 ? 1 : -1}}>
             <div className="slideBackground" style={{backgroundImage: `url('${slide.image}')`}}/>
             <div className="slideContent" style={{backgroundImage: `url('${slide.image}')`}}>
-                <div className="slideContentInner">
+                <div className="slideContentInner" style={{color: slide.color}}>
                     <h2 className="slideTitle">{slide.title}</h2>
                     <h3 className="slideSubtitle">{slide.subtitle}</h3>
                     <p className="slideDescription">{slide.description}</p>
                 </div>
+                {/* <Button className="demo-btn" type="dashed" ghost style={{color: slide.color, "border-color": slide.color}}>Demo</Button> */}
                 <Button className="demo-btn" type="dashed" ghost>Demo</Button>
             </div>
         </div>

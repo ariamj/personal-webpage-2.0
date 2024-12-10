@@ -100,6 +100,11 @@ body {
         margin-right: 1vw;
         font-size: 1.5dvw;
     }
+
+    .demo-btn:hover, :active {
+        color: #0958d9;
+        border-color: #0958d9;
+    }
 }
 
 .slideContentInner {
