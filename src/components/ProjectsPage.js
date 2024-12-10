@@ -1,6 +1,7 @@
 import React from "react";
 import './ProjectsPage.css'
 import ProjectCard from "./ProjectCard";
+import { Button } from 'antd'
 import ProjectImage from '../assets/img/bubbles_static.png'
 import ProjectGIF from '../assets/img/bubbles_animated.GIF'
 
@@ -10,7 +11,7 @@ import { Image } from 'antd'
 const slides = [
     {
         title: "Harmonic Hustle",
-        subtitle: "subtitle 1",
+        subtitle: "A Rythm Game",
         description: "description 1",
         image: ProjectImage
     },
@@ -105,6 +106,7 @@ function Slide({slide, offset}) {
                     <h3 className="slideSubtitle">{slide.subtitle}</h3>
                     <p className="slideDescription">{slide.description}</p>
                 </div>
+                <Button className="demo-btn" type="dashed" ghost>Demo</Button>
             </div>
         </div>
     );
