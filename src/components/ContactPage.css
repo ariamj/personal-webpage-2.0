@@ -1,0 +1,18 @@
+.contact-page {
+    height: 100vh;
+    width: 100vw;
+    /* background-color: purple; */
+    background-image: url('../assets/img/bubbles_static.png');
+}
+
+.contact-page-inner {
+    display: flex;
+    flex-direction: column;
+    justify-self: center;
+    align-items: center;
+    transform: translateY(100%);
+
+    .contact-title {
+        color: white;
+    }
+}
