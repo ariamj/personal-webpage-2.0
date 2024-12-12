@@ -87,10 +87,30 @@ body {
     align-content: center;
     transform-style: preserve-3d; /*give 3D effect*/
     transform: perspective(1000px) translateX(calc(100% * var(--offset))) rotateY(calc(-45deg * var(--dir)));
+
+    .demo-btn {
+        transform-style: preserve-3d;
+        transform: translateZ(2rem);
+        transition: opacity 0.3s linear;
+        text-shadow: 0 0.1rem 1rem #000;
+        opacity: 0;
+        height: 3vw;
+        width: 10vw;
+        justify-self: end;
+        margin-right: 1vw;
+        font-size: 1.5dvw;
+    }
+
+    .demo-btn:hover, :active {
+        color: #0958d9;
+        border-color: #0958d9;
+    }
 }
 
 .slideContentInner {
     color: white;
+    height: calc(40vw - 8vw);
+    align-content: center;
 
     transform-style: preserve-3d;
     transform: translateZ(2rem);
@@ -163,5 +183,9 @@ body {
             transition: none;
             transform: perspective(1000px) rotateY(calc(var(--x) * 45deg)) rotateX(calc(var(--y) * -45deg));
         }
+    }
+
+    .demo-btn {
+        opacity: 1;
     }
 }

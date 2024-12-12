@@ -59,8 +59,8 @@ function NavTabs() {
 
     const contact = (
         <Flex className='contact-btns' gap="small" justify='space-between'>
-            <Button className='github-contact' icon={<GithubOutlined />}/>
-            <Button className='linked-contact' icon={<LinkedinOutlined />}/>
+            <Button className='github-contact' href='https://github.com/ariamj' target='_blank' icon={<GithubOutlined />}/>
+            <Button className='linked-contact' href='https://www.linkedin.com/in/arianna-joe' target='_blank' icon={<LinkedinOutlined />}/>
         </Flex>
     )
 
