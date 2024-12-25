@@ -1,12 +1,15 @@
 import './ContactPage.css'
 import { useState } from 'react';
 import { GithubFilled, LinkedinFilled, MailFilled } from '@ant-design/icons';
-import { Button, Typography, Space } from 'antd';
+import { Button, Typography, Space, Modal, Image } from 'antd';
+import demo from '../assets/img/Big2_Demo.mp4'
+import pic from '../assets/img/bubbles_static.png'
 
 const { Title, Paragraph, Text } = Typography
 
 function ContactPage() {
     const [size, setSize] = useState('large');
+    const [videoFile, setVideoFile] = useState(demo);
 
     return (
         <div className='contact-page'>

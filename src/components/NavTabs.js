@@ -5,7 +5,7 @@ import Tab from 'react-bootstrap/Tab';
 import HomeIntro from './HomePage';
 import ProjectsPage from './ProjectsPage';
 
-import { Tabs, theme, Button, Flex } from "antd"
+import { Tabs, theme, Button, Flex, Image } from "antd"
 import StickyBox from 'react-sticky-box';
 import { render } from '@testing-library/react';
 import { GithubOutlined, LinkedinOutlined } from '@ant-design/icons';
