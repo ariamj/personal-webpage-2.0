@@ -1,42 +1,54 @@
 import React from "react";
 import './ProjectsPage.css'
 import ProjectCard from "./ProjectCard";
-import { Button } from 'antd'
+import { Button, Card } from 'antd'
+import { useState } from 'react';
+
 import ProjectImage from '../assets/img/bubbles_static.png'
 import ProjectGIF from '../assets/img/bubbles_animated.GIF'
 import Spade from '../assets/img/2S.jpg'
+import big2 from '../assets/img/Big2_ss.png'
+import demo from '../assets/img/Big2_Demo.mp4'
 
-import { Image } from 'antd'
+import { Image, Modal } from 'antd'
 
 /*  Carousal style referenced from:  https://codepen.io/team/keyframers/pen/rNxmVZN?editors=0100 */
 const slides = [
     {
         title: "Harmonic Hustle",
         subtitle: "A Rythm Game",
-        description: "description 1",
+        description: "Using C++ and OpenGL, develop a user-interactive rhythm-based game that \
+            contains multiple different scenes along with key-mapping and audio based on ECS pattern",
         image: ProjectImage,
         color: "white",
+        demo: "",
+    },
+    {
+        title: "Insight UBC",
+        subtitle: "",
+        description: "Using HTML and CSS, developed the user interface and JavaScript to send and \
+            get REST API calls to and from the server to query a dataset",
+        image: ProjectGIF,
+        color: "white",
+        demo: "",
     },
     {
         title: "Big 2",
         subtitle: "An Alternate Version",
-        description: "description 2",
+        description: "An altered version of the game Big 2 in Java with a graphic user interface \
+            through Swing and layering multiple JFrames and JPanels",
         image: Spade,
         color: "black",
+        demo: demo,
     },
     {
         title: "Gallery Manager",
-        subtitle: "subtitle 3",
-        description: "description 3",
-        image: ProjectImage,
-        color: "white",
-    },
-    {
-        title: "Insight UBC",
-        subtitle: "subtitle 4",
-        description: "description 4",
+        subtitle: "",
+        description: "Helping manage galleries and art pieces by processing data on the gallery \
+            or art piece onto a database for the client to query and track related attributes",
         image: ProjectGIF,
         color: "white",
+        demo: "",
     },
 ]
 
@@ -101,18 +113,43 @@ const slidesReducer = (state, event) => {
 function Slide({slide, offset}) {
     const active = offset === 0 ? true : null;
     const ref = useTilt(active);
+    const [open, setOpen] = useState(false);
+
+    const showModal = () => {
+        setOpen(true);
+    }
+    
+    const handleCancel = () => {
+        document.querySelectorAll("video").forEach((video) => video.pause());
+        setOpen(false);
+    }
 
     return (
         <div ref={ref} className="slide" data-active={active} style={{"--offset": offset, "--dir": offset === 0 ? 0 : offset > 0 ? 1 : -1}}>
             <div className="slideBackground" style={{backgroundImage: `url('${slide.image}')`}}/>
             <div className="slideContent" style={{backgroundImage: `url('${slide.image}')`}}>
+                {/* <div className="slideContentInnerBackground"></div> */}
                 <div className="slideContentInner" style={{color: slide.color}}>
                     <h2 className="slideTitle">{slide.title}</h2>
                     <h3 className="slideSubtitle">{slide.subtitle}</h3>
                     <p className="slideDescription">{slide.description}</p>
                 </div>
                 {/* <Button className="demo-btn" type="dashed" ghost style={{color: slide.color, "border-color": slide.color}}>Demo</Button> */}
-                <Button className="demo-btn" type="dashed" ghost>Demo</Button>
+                {slide.demo != "" ? (
+                    <Button className="demo-btn" id='demo-btn' type="dashed" onClick={showModal} ghost>Demo</Button>
+                ) : null}
+                <Modal
+                    className="demo-modal"
+                    width={1000}
+                    open={open}
+                    // title="Demo"
+                    onCancel={handleCancel}
+                    footer={[]}
+                >
+                    <video width='100%' id="demo-video" controls>
+                        <source src={slide.demo}/>
+                    </video>
+                </Modal>
             </div>
         </div>
     );

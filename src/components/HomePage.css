@@ -16,7 +16,7 @@ body {
     /* background-color: red; */
     /* overflow-y: hidden; */
     /* background-image: url("../assets/img/bubbles_static.png"); */
-    background-color: purple;
+    /* background-color: purple; */
     background-size: cover;
 
     font-size: larger;
@@ -26,23 +26,28 @@ body {
     height: 100vh;
     /* background-color: rgb(255, 0, 166); */
     background-image: url("../assets/img/bubbles_static.png");
+    background-position: bottom;
     /* display: flex; */
 }
 
 .intro {
     margin: 0;
     margin-left: 1rem;
+    padding: 1rem;
+    width: 50vw;
+    height: 50vh;
     /* position: absolute; */
     /* top: 50%; */
     /* -ms-transform: translateY(-50%);
     transform: translateY(-50%); */
 
     > .ant-typography {
-        color: white !important;
+        color: whitesmoke !important;
     }
 }
 
-.intro-img {
+.intro-img-img {
+    border-radius: 75% !important;
     /* top: 50%; */
     /* transform: translateX(-50%); */
     /* align-items: center;
@@ -52,4 +57,13 @@ body {
 .skill-section {
     height: 100vh;
     background-color: aqua;
+}
+
+.glass {
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
 }

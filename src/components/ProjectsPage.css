@@ -88,6 +88,12 @@ body {
     transform-style: preserve-3d; /*give 3D effect*/
     transform: perspective(1000px) translateX(calc(100% * var(--offset))) rotateY(calc(-45deg * var(--dir)));
 
+    .slideContentInnerBackground {
+        height: 50vh;
+        background-color: purple;
+        z-index: 1;
+    }
+
     .demo-btn {
         transform-style: preserve-3d;
         transform: translateZ(2rem);
