@@ -8,6 +8,9 @@ import ProjectImage from '../assets/img/bubbles_static.png'
 import ProjectGIF from '../assets/img/bubbles_animated.GIF'
 import Spade from '../assets/img/2S.jpg'
 import big2 from '../assets/img/Big2_ss.png'
+import HarmonicHusttleImage from '../assets/img/Harmonic_Hustle.png'
+import Big2Image from '../assets/img/Big_2.png'
+
 import demo from '../assets/img/Big2_Demo.mp4'
 
 import { Image, Modal } from 'antd'
@@ -19,7 +22,7 @@ const slides = [
         subtitle: "A Rythm Game",
         description: "Using C++ and OpenGL, develop a user-interactive rhythm-based game that \
             contains multiple different scenes along with key-mapping and audio based on ECS pattern",
-        image: ProjectImage,
+        image: HarmonicHusttleImage,
         color: "white",
         demo: "",
     },
@@ -37,8 +40,8 @@ const slides = [
         subtitle: "An Alternate Version",
         description: "An altered version of the game Big 2 in Java with a graphic user interface \
             through Swing and layering multiple JFrames and JPanels",
-        image: Spade,
-        color: "black",
+        image: Big2Image,
+        color: "white",
         demo: demo,
     },
     {
