@@ -3,6 +3,7 @@
     width: 100vw;
     /* background-color: purple; */
     background-image: url('../assets/img/bubbles_static.png');
+    background-size: cover;
 }
 
 .contact-page-inner {
