@@ -8,8 +8,10 @@ import ProjectImage from '../assets/img/bubbles_static.png'
 import ProjectGIF from '../assets/img/bubbles_animated.GIF'
 import Spade from '../assets/img/2S.jpg'
 import big2 from '../assets/img/Big2_ss.png'
-import HarmonicHusttleImage from '../assets/img/Harmonic_Hustle.png'
-import Big2Image from '../assets/img/Big_2.png'
+import HarmonicHusttleCover from '../assets/img/Harmonic_Hustle.png'
+import InsightUBCCover from '../assets/img/Insight_UBC.png'
+import Big2Cover from '../assets/img/Big_2.png'
+import GalleryManagerCover from '../assets/img/Gallery_Manager.png'
 
 import demo from '../assets/img/Big2_Demo.mp4'
 
@@ -22,7 +24,7 @@ const slides = [
         subtitle: "A Rythm Game",
         description: "Using C++ and OpenGL, develop a user-interactive rhythm-based game that \
             contains multiple different scenes along with key-mapping and audio based on ECS pattern",
-        image: HarmonicHusttleImage,
+        image: HarmonicHusttleCover,
         color: "white",
         demo: "",
     },
@@ -31,7 +33,7 @@ const slides = [
         subtitle: "",
         description: "Using HTML and CSS, developed the user interface and JavaScript to send and \
             get REST API calls to and from the server to query a dataset",
-        image: ProjectGIF,
+        image: InsightUBCCover,
         color: "white",
         demo: "",
     },
@@ -40,7 +42,7 @@ const slides = [
         subtitle: "An Alternate Version",
         description: "An altered version of the game Big 2 in Java with a graphic user interface \
             through Swing and layering multiple JFrames and JPanels",
-        image: Big2Image,
+        image: Big2Cover,
         color: "white",
         demo: demo,
     },
@@ -49,7 +51,7 @@ const slides = [
         subtitle: "",
         description: "Helping manage galleries and art pieces by processing data on the gallery \
             or art piece onto a database for the client to query and track related attributes",
-        image: ProjectGIF,
+        image: GalleryManagerCover,
         color: "white",
         demo: "",
     },
