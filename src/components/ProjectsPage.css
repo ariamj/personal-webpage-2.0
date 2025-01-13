@@ -140,7 +140,8 @@ body {
 
     .slideDescription {
         margin: 0;
-        font-size: 0.8rem;
+        /* font-size: 0.8rem; */
+        font-size: 1dvw;
         letter-spacing: 0.2ch;
     }
 }

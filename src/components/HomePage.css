@@ -6,6 +6,10 @@ body {
     padding: 0;
 }
 
+.ant-typography-title {
+    font-size: 10dvw;
+}
+
 .glass {
     background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
     backdrop-filter: blur(10px);
@@ -29,6 +33,7 @@ body {
     /* background-size: cover; */
     background-attachment: fixed;
     background-position: bottom right;
+    background-size: cover;
 
     font-size: larger;
 }

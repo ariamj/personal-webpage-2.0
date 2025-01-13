@@ -1,5 +1,5 @@
 import './HomePage.css'
-import { Typography, Image, Flex, Tag } from 'antd';
+import { Typography, Image, Flex, Tag, ConfigProvider } from 'antd';
 import pic from "../assets/img/bubbles_static.png"
 import gif from "../assets/img/bubbles_animated.GIF"
 
@@ -8,6 +8,33 @@ const { Title, Paragraph, Text } = Typography
 function HomeIntro() {
 
     return (
+        // <ConfigProvider
+        //     theme={{
+        //         token: {
+        //             // fontSize: 20,
+        //             fontSizeHeading1: 100,
+        //             // fontSizeHeading2: 24,
+        //             // fontSizeHeading3: 20,
+        //             // fontSizeHeading4: 16,
+        //             // fontSizeHeading5: 14,
+        //         },
+        //         components: {
+        //             Typography: {
+        //                 // lineHeightHeading1: 1.2,
+        //                 // lineHeightHeading2: 1.2,
+        //                 // lineHeightHeading3: 1.2,
+        //                 // lineHeightHeading4: 1.2,
+        //                 // lineHeightHeading5: 1.2,
+        //             },
+        //             Select: {
+        //                 controlHeight: 40,
+        //                 controlHeightLG: 42,
+        //                 borderRadius: 16,
+        //                 lineWidth: 0,
+        //             },
+        //         },
+        //     }}
+        // >
         <div className="homePage">
             <Flex className='section intro-section' justify='space-evenly' align='center'>
                 <Flex className='section-inner intro glass' vertical align='flex-start' justify='center'>
@@ -107,6 +134,7 @@ function HomeIntro() {
                 </Flex>
             </Flex>
         </div>
+        // </ConfigProvider>
     );
 }
 

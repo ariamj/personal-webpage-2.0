@@ -15,7 +15,7 @@ function ContactPage() {
         <div className='contact-page'>
             <div className='contact-page-inner'>
                 <Title className='contact-title' italic>Contact Me!</Title>
-                <Space>
+                <Space wrap align='center'>
                     <Button 
                         type='default' 
                         shape='round' 
@@ -40,10 +40,14 @@ function ContactPage() {
                         type='default' 
                         shape='round' 
                         size={size} 
+                        onClick={(e) => {
+                            window.location.href = "mailto:joearianna828@gmail.com";
+                            e.preventDefault();
+                        }}
                         target='_blank' 
                         icon={<MailFilled/>}
                     >
-                        Email
+                        Email: joearianna828@gmail.com
                     </Button>
                 </Space>
             </div>
