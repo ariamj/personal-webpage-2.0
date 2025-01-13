@@ -25,7 +25,7 @@ function NavTabs() {
 
     const tab_items = new Array(
         {
-            label: 'Home',
+            label: 'About Me',
             key: 'home',
             children: <HomeIntro></HomeIntro>
         },
