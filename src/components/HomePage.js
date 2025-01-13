@@ -1,5 +1,5 @@
 import './HomePage.css'
-import { Typography, Image, Flex } from 'antd';
+import { Typography, Image, Flex, Tag } from 'antd';
 import pic from "../assets/img/bubbles_static.png"
 import gif from "../assets/img/bubbles_animated.GIF"
 
@@ -9,8 +9,8 @@ function HomeIntro() {
 
     return (
         <div className="homePage">
-            <Flex className='intro-section' justify='space-evenly' align='center'>
-                <Flex className='intro glass' vertical align='flex-start' justify='center'>
+            <Flex className='section intro-section' justify='space-evenly' align='center'>
+                <Flex className='section-inner intro glass' vertical align='flex-start' justify='center'>
                     <Title classname="name">Arianna</Title>
                     <Title level={3} classname="sub-info" italic>4th year, UBC Computer Science Major</Title>
                     <Paragraph className="intro-description">
@@ -24,8 +24,8 @@ function HomeIntro() {
                     <Image width={300} src={gif} preview={false} className='intro-img-img'/>
                 </Flex> */}
             </Flex>
-            <Flex className='exp-section' justify='space-evenly' align='center'>
-                <Flex className='experience glass' align='center' justify='space-evenly'>
+            <Flex className='section exp-section' justify='space-evenly' align='center'>
+                <Flex className='section-inner experience glass' align='center' justify='space-evenly'>
                     <Title level={2} className='exp-title'>Internships</Title>
                     {/* <Paragraph className='exp-description'>
                         Did 8 months of internship each at SAP and PayByPhone...
@@ -51,6 +51,58 @@ function HomeIntro() {
                             outstanding bugs to help improve the overall performance of our team owned features while increasing 
                             the overall coverage of codes owned by the team via writing unit tests with both JavaScript and TypeScript.
                         </Paragraph>
+                    </Flex>
+                </Flex>
+            </Flex>
+            <Flex className='section skills-section' justify='space-evenly' align='center'>
+                <Flex className='section-inner skills glass' justify='space-evenly' align='center'>
+                    <Title level={2} className='skills-title'>Skills</Title>
+                    <Flex className='skills-info' vertical>
+                        <Title level={4} className='skills-group-title'>Programming Languages</Title>
+                        <Flex gap='8px 0' wrap>
+                            <Tag className='skill-tag glass'>Java</Tag>
+                            <Tag className='skill-tag glass'>Python</Tag>
+                            <Tag className='skill-tag glass'>JavaScript</Tag>
+                            <Tag className='skill-tag glass'>TypeScript</Tag>
+                            <Tag className='skill-tag glass'>C++</Tag>
+                            <Tag className='skill-tag glass'>C</Tag>
+                            <Tag className='skill-tag glass'>SQL</Tag>
+                            <Tag className='skill-tag glass'>Kotlin</Tag>
+                            <Tag className='skill-tag glass'>PHP</Tag>
+                            <Tag className='skill-tag glass'>Assembly</Tag>
+                            <Tag className='skill-tag glass'>DrRacket</Tag>
+                        </Flex>
+                        <Title level={4} className='skills-group-title'>Web</Title>
+                        <Flex gap='8px 0' wrap>
+                            <Tag className='skill-tag glass'>HTML</Tag>
+                            <Tag className='skill-tag glass'>CSS</Tag>
+                            <Tag className='skill-tag glass'>React</Tag>
+                        </Flex>
+                        <Title level={4} className='skills-group-title'>Frameworks/Libraries</Title>
+                        <Flex gap='8px 0' wrap>
+                            <Tag className='skill-tag glass'>Node</Tag>
+                            <Tag className='skill-tag glass'>OpenGL</Tag>
+                            <Tag className='skill-tag glass'>Scikit-Learn</Tag>
+                            <Tag className='skill-tag glass'>Espresso</Tag>
+                            <Tag className='skill-tag glass'>UiAutomator</Tag>
+                            <Tag className='skill-tag glass'>Jetpack Compose</Tag>
+                            <Tag className='skill-tag glass'>JUnit</Tag>
+                            <Tag className='skill-tag glass'>Mocha</Tag>
+                            <Tag className='skill-tag glass'>Swing</Tag>
+                            <Tag className='skill-tag glass'>Jasmine</Tag>
+                            <Tag className='skill-tag glass'>Jest</Tag>
+                        </Flex>
+                        <Title level={4} className='skills-group-title'>Tools/Environments</Title>
+                        <Flex gap='8px 0' wrap>
+                            <Tag className='skill-tag glass'>Git</Tag>
+                            <Tag className='skill-tag glass'>GitHub</Tag>
+                            <Tag className='skill-tag glass'>Visual Studio Code</Tag>
+                            <Tag className='skill-tag glass'>Android Studio</Tag>
+                            <Tag className='skill-tag glass'>IntelliJ</Tag>
+                            <Tag className='skill-tag glass'>Jira</Tag>
+                            <Tag className='skill-tag glass'>Figma</Tag>
+                            <Tag className='skill-tag glass'>Jupyter</Tag>
+                        </Flex>
                     </Flex>
                 </Flex>
             </Flex>

@@ -6,6 +6,15 @@ body {
     padding: 0;
 }
 
+.glass {
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+}
+
 .homePage {
     /* height: 100vh; */
     width: 100vw;
@@ -24,8 +33,22 @@ body {
     font-size: larger;
 }
 
-.intro-section {
+.section {
     height: 100vh;
+}
+
+.section-inner {
+    margin: 0;
+    margin-left: 1rem;
+    padding: 1rem;
+
+    .ant-typography {
+        color: whitesmoke !important;
+    }
+}
+
+.intro-section {
+    /* height: 100vh; */
     /* background-color: rgb(255, 0, 166); */
     /* background-image: url("../assets/img/bubbles_static.png"); */
     /* background-position: bottom; */
@@ -33,9 +56,9 @@ body {
 }
 
 .intro {
-    margin: 0;
+    /* margin: 0;
     margin-left: 1rem;
-    padding: 1rem;
+    padding: 1rem; */
     width: 50vw;
     height: 50vh;
     /* position: absolute; */
@@ -43,9 +66,9 @@ body {
     /* -ms-transform: translateY(-50%);
     transform: translateY(-50%); */
 
-    > .ant-typography {
+    /* > .ant-typography {
         color: whitesmoke !important;
-    }
+    } */
 }
 
 .intro-img-img {
@@ -57,21 +80,21 @@ body {
 }
 
 .exp-section {
-    height: 100vh;
+    /* height: 100vh; */
     /* background-color: aqua; */
 }
 
 .experience {
-    margin: 0;
+    /* margin: 0;
     margin-left: 1rem;
-    padding: 1rem;
+    padding: 1rem; */
     width: 75vw;
     height: 75vh;
 
-    > .ant-typography,
+    /* > .ant-typography,
     div .ant-typography {
         color: whitesmoke !important;
-    }
+    } */
 }
 
 .exp-infos {
@@ -82,11 +105,21 @@ body {
     }
 }
 
-.glass {
-    background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
-    border-radius: 20px;
-    border: 1px solid rgba(255, 255, 255, 0.18);
-    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+.skills {
+    width: 75vw;
+    height: 75vh;
+}
+
+.skills-info {
+    width: 60%;
+
+    .skills-group-title {
+        margin-top: 1.5rem;
+    }
+}
+
+.skill-tag {
+    border-color: aqua;
+    color: aqua;
+    border-radius: 10px !important;
 }
