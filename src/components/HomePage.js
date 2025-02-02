@@ -1,11 +1,16 @@
 import './HomePage.css'
 import { Typography, Image, Flex, Tag, ConfigProvider } from 'antd';
+// import useScrollSnap from "./useScrollSnap";
 import pic from "../assets/img/bubbles_static.png"
 import gif from "../assets/img/bubbles_animated.GIF"
+import { useRef } from 'react';
+import useScrollSnap from 'react-use-scroll-snap';
 
 const { Title, Paragraph, Text } = Typography
 
 function HomeIntro() {
+    const scrollRef = useRef(null);
+    useScrollSnap({ref: scrollRef, duration: 50, delay: 20 });
 
     return (
         // <ConfigProvider
@@ -35,11 +40,11 @@ function HomeIntro() {
         //         },
         //     }}
         // >
-        <div className="homePage">
+        <div className="homePage" ref={scrollRef}>
             <Flex className='section intro-section' justify='space-evenly' align='center'>
                 <Flex className='section-inner intro glass' vertical align='flex-start' justify='center'>
-                    <Title classname="name">Arianna</Title>
-                    <Title level={3} classname="sub-info" italic>4th year, UBC Computer Science Major</Title>
+                    <Title className="name">Arianna</Title>
+                    <Title level={3} className="sub-info" italic>4th year, UBC Computer Science Major</Title>
                     <Paragraph className="intro-description">
                         Hello, welcome to my page! I am a fast learner who enjoys challenging myself to 
                         create unique products that have meaning and are valuable for practical use. With a 
@@ -48,7 +53,7 @@ function HomeIntro() {
                     </Paragraph>
                 </Flex>
                 {/* <Flex className='intro-img' vertical justify='center' align='center'>
-                    <Image width={300} src={gif} preview={false} className='intro-img-img'/>
+                    <Image width={300} src={gif} preview={true} className='intro-img-img'/>
                 </Flex> */}
             </Flex>
             <Flex className='section exp-section' justify='space-evenly' align='center'>
