@@ -4,6 +4,7 @@ body {
     width: 100%;
     margin: 0;
     padding: 0;
+    scroll-snap-type: y mandatory;
 }
 
 .ant-typography-title {
@@ -40,11 +41,17 @@ body {
 
 .section {
     height: 100vh;
+    scroll-snap-align: start;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    /* background-color: rebeccapurple; */
 }
 
 .section-inner {
     margin: 0;
-    margin-left: 1rem;
+    /* margin-left: 1rem; */
+    margin: 15px 10px;
     padding: 1rem;
 
     .ant-typography {
@@ -64,8 +71,8 @@ body {
     /* margin: 0;
     margin-left: 1rem;
     padding: 1rem; */
-    width: 50vw;
-    height: 50vh;
+    width: 95vw;
+    height: 60vh;
     /* position: absolute; */
     /* top: 50%; */
     /* -ms-transform: translateY(-50%);
@@ -93,26 +100,43 @@ body {
     /* margin: 0;
     margin-left: 1rem;
     padding: 1rem; */
-    width: 75vw;
-    height: 75vh;
-
+    width: 85vw;
+    /* min-height: 85vh; */
     /* > .ant-typography,
     div .ant-typography {
         color: whitesmoke !important;
     } */
+
+    .exp-title {
+        font-size: 3.5vmin !important;
+    }
 }
 
 .exp-infos {
     width: 60%;
 
+    .exp-pos {
+        font-size: 3vmin !important;
+    }
+
     .exp-company {
         margin-top: 0 !important;
+        font-size: 2.5vmin !important;
+    }
+
+    .exp-description {
+        font-size: 2vmin !important;
+        /* font-size: 1.65vmin !important; */
     }
 }
 
 .skills {
     width: 75vw;
-    height: 75vh;
+    /* min-height: 75vh; */
+
+    .skills-title {
+        font-size: 3.5vmin !important;
+    }
 }
 
 .skills-info {
@@ -120,6 +144,7 @@ body {
 
     .skills-group-title {
         margin-top: 1.5rem;
+        font-size: 2.5vmin;
     }
 }
 
@@ -127,4 +152,5 @@ body {
     border-color: aqua;
     color: aqua;
     border-radius: 10px !important;
+    font-size: 2vmin;
 }

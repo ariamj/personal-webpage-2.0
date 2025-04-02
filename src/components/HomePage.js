@@ -5,12 +5,21 @@ import pic from "../assets/img/bubbles_static.png"
 import gif from "../assets/img/bubbles_animated.GIF"
 import { useRef } from 'react';
 import useScrollSnap from 'react-use-scroll-snap';
+import * as motion from "motion/react-client";
+// import { Typography } from '@mui/material';
 
 const { Title, Paragraph, Text } = Typography
 
 function HomeIntro() {
     const scrollRef = useRef(null);
-    useScrollSnap({ref: scrollRef, duration: 50, delay: 20 });
+    // useScrollSnap({ref: scrollRef, duration: 50, delay: 20 });
+
+    const box = {
+        width: 100,
+        height: 100,
+        backgroundColor: "#9911ff",
+        borderRadius: 5,
+    }
 
     return (
         // <ConfigProvider
@@ -40,9 +49,9 @@ function HomeIntro() {
         //         },
         //     }}
         // >
-        <div className="homePage" ref={scrollRef}>
+        <div className="homePage">
             <Flex className='section intro-section' justify='space-evenly' align='center'>
-                <Flex className='section-inner intro glass' vertical align='flex-start' justify='center'>
+                <Flex className='section-inner intro glass' vertical align='flex-start' justify='center' ref={scrollRef}>
                     <Title className="name">Arianna</Title>
                     <Title level={3} className="sub-info" italic>4th year, UBC Computer Science Major</Title>
                     <Paragraph className="intro-description">
@@ -55,9 +64,14 @@ function HomeIntro() {
                 {/* <Flex className='intro-img' vertical justify='center' align='center'>
                     <Image width={300} src={gif} preview={true} className='intro-img-img'/>
                 </Flex> */}
+                {/* <motion.div
+                    whileHover={{ scale: 1.2 }}
+                    whileTap={{ scale: 0.8 }}
+                    style={box}
+                /> */}
             </Flex>
             <Flex className='section exp-section' justify='space-evenly' align='center'>
-                <Flex className='section-inner experience glass' align='center' justify='space-evenly'>
+                <Flex className='section-inner experience glass' align='center' justify='space-evenly' ref={scrollRef}>
                     <Title level={2} className='exp-title'>Internships</Title>
                     {/* <Paragraph className='exp-description'>
                         Did 8 months of internship each at SAP and PayByPhone...
@@ -87,7 +101,7 @@ function HomeIntro() {
                 </Flex>
             </Flex>
             <Flex className='section skills-section' justify='space-evenly' align='center'>
-                <Flex className='section-inner skills glass' justify='space-evenly' align='center'>
+                <Flex className='section-inner skills glass' justify='space-evenly' align='center' ref={scrollRef}>
                     <Title level={2} className='skills-title'>Skills</Title>
                     <Flex className='skills-info' vertical>
                         <Title level={4} className='skills-group-title'>Programming Languages</Title>
