@@ -5,10 +5,12 @@ import HomePage from './components/HomePage';
 import ProjectsPage from './components/ProjectsPage';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import NavTabs from './components/NavTabs';
+import { Analytics } from '@vercel/analytics/react';
 
 function App() {
   return (
     <div className="App">
+      <Analytics/>
       {/* <NavBar></NavBar> */}
       <NavTabs></NavTabs>
       {/* <HomePage></HomePage> */}

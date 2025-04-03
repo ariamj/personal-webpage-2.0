@@ -22,18 +22,6 @@ import { Image, Modal } from 'antd'
 /*  Carousal style referenced from:  https://codepen.io/team/keyframers/pen/rNxmVZN?editors=0100 */
 const slides = [
     {
-        title: "Steam Games",
-        subtitle: "",
-        description: "Using JavaScript, HTML, CSS, and the D3 library, my team and I designed \
-            and created visualizations from scratch to compare and contrast data from Steam. Graphs are \
-            bidirectionally linked and made interactive to expose more data for users to view.",
-        image: steamGamesCover,
-        color: "white",
-        descBase: true,
-        descBaseHeight: 12,
-        demo: "",
-    },
-    {
         title: "Grocery Assistant",
         subtitle: "Prototype",
         description: "With the completion of executing UX research, a prototype of a proposed design \
@@ -48,6 +36,18 @@ const slides = [
         demo: "",
         linkName: "Prototype",
         link: "https://www.figma.com/proto/XLhB1KSVR0TY0rwynkjHTb/CPSC344-Mid-Fi-Prototype?node-id=0-1&t=qi5u7ctfvWcHzfER-1",
+    },
+    {
+        title: "Steam Games",
+        subtitle: "",
+        description: "Using JavaScript, HTML, CSS, and the D3 library, my team and I designed \
+            and created visualizations from scratch to compare and contrast data from Steam. Graphs are \
+            bidirectionally linked and made interactive to expose more data for users to view.",
+        image: steamGamesCover,
+        color: "white",
+        descBase: true,
+        descBaseHeight: 12,
+        demo: "",
     },
     {
         title: "Harmonic Hustle",
