@@ -94,6 +94,20 @@ body {
         z-index: 1;
     }
 
+    .slideDescBase {
+        width: 28vw;
+        /* height: 12vh; */
+        position: absolute;
+        margin: 0;
+        top: 45%;
+        background-color: rgba(0, 0, 0, 0.6);
+        transform-style: preserve-3d;
+        transform: translateZ(1rem);
+        transition: opacity 0.3s linear; /*transition for attribute opacity*/
+        text-shadow: 0 0.1rem 1rem #000;
+        opacity: 0;
+    }
+
     .demo-btn {
         transform-style: preserve-3d;
         transform: translateZ(2rem);
@@ -132,6 +146,11 @@ body {
         letter-spacing: 0.2ch;
         text-transform: uppercase;
         margin: 0;
+        /* top: 35%; */
+    }
+
+    .slideSubtitle {
+        font-size: 2dvw;
     }
 
     .slideSubtitle::before {
@@ -140,6 +159,9 @@ body {
 
     .slideDescription {
         margin: 0;
+        width: 28vw;
+        margin-top: 5px;
+        /* top: 35%; */
         /* font-size: 0.8rem; */
         font-size: 1dvw;
         letter-spacing: 0.2ch;
@@ -177,7 +199,8 @@ body {
         transform: none;
     }
 
-    .slideContentInner {
+    .slideContentInner,
+    .slideDescBase {
         opacity: 1;
     }
 

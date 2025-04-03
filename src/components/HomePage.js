@@ -51,7 +51,7 @@ function HomeIntro() {
         // >
         <div className="homePage">
             <Flex className='section intro-section' justify='space-evenly' align='center'>
-                <Flex className='section-inner intro glass' vertical align='flex-start' justify='center' ref={scrollRef}>
+                <Flex className='section-inner intro' vertical align='flex-start' justify='center' ref={scrollRef}>
                     <Title className="name">Arianna</Title>
                     <Title level={3} className="sub-info" italic>4th year, UBC Computer Science Major</Title>
                     <Paragraph className="intro-description">
