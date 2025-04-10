@@ -1,5 +1,28 @@
+html {
+    /* scroll-snap-type: y mandatory; */
+}
+body {
+    overflow-x: hidden;
+    overflow-y: scroll;
+}
+
+.proj-card {
+    /* display: block; */
+    transform: translateX(-100px);
+    opacity: 0;
+}
+
+.container {
+    min-height: 100vh;
+    scroll-snap-align: start;
+    /* display: flex;
+    justify-content: center;
+    align-items: center; */
+    /* position: relative; */
+}
+
 .all-projs {
     width: 100vw;
-    height: 100vh;
+    min-height: 100vh;
     padding: 5%;
 }

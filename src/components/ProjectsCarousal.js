@@ -22,7 +22,7 @@ import { Image, Modal } from 'antd'
 /*  Carousal style referenced from:  https://codepen.io/team/keyframers/pen/rNxmVZN?editors=0100 */
 const slides = [
     {
-        title: "Grocery Assistant",
+        title: "Shopping Assistant",
         subtitle: "Prototype",
         description: "With the completion of executing UX research, a prototype of a proposed design \
             to build a personal shopper who helps with composing a concise and complete list of items \
@@ -178,7 +178,7 @@ function Slide({slide, offset}) {
                     <h3 className="slideSubtitle">{slide.subtitle}</h3>
                     <p className="slideDescription">{slide.description}</p>
                 </div>
-                {console.log(slide.title, " -> ", slide.links)}
+                {/* {console.log(slide.title, " -> ", slide.links)} */}
                 {slide.link ? (
                     <Button className="demo-btn" id="link-btn" type="dashed" target="_blank" href={`${slide.link}`} 
                         // style={{color: `${slide.color}`, borderColor: `${slide.color}`}} 
