@@ -2,24 +2,25 @@ html {
     /* scroll-snap-type: y mandatory; */
 }
 body {
-    overflow-x: hidden;
-    overflow-y: scroll;
+    /* overflow-x: hidden;
+    overflow-y: scroll; */
+    /* background-color: black; */
 }
 
 .proj-card {
     /* display: block; */
-    transform: translateX(-100px);
-    opacity: 0;
+    /* transform: translateX(-100px);
+    opacity: 0; */
 }
 
-.container {
+/* .container {
     min-height: 100vh;
     scroll-snap-align: start;
-    /* display: flex;
+    display: flex;
     justify-content: center;
-    align-items: center; */
-    /* position: relative; */
-}
+    align-items: center;
+    position: relative;
+} */
 
 .all-projs {
     width: 100vw;

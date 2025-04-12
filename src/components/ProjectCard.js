@@ -33,7 +33,9 @@ function ProjectCard({ project = {
   // console.log(image);
 
   return (
-    <Card className='card' sx={{maxWidth: 305, maxHeight: 'auto', minHeight: cardHeight, position: 'relative'}}>
+    <Card className='card' 
+      sx={{maxWidth: 305, maxHeight: 'auto', minHeight: cardHeight, position: 'relative', borderRadius: 5}}
+    >
       <CardActionArea>
         <CardMedia
           className='cover-img'
@@ -47,7 +49,8 @@ function ProjectCard({ project = {
             objectFit: 'cover',
           }}
         />
-        <CardContent sx={{height: bodyHeight}}>
+        {/* <CardContent sx={{height: bodyHeight}}>  */} {/*temp until modal implemented*/}
+        <CardContent>
           <Typography variant="h5" component="h2" sx={{ mb: 1 }}>
             {project.title}
           </Typography>
@@ -62,7 +65,8 @@ function ProjectCard({ project = {
           </Typography>
           <Typography variant="body2" 
             className='body-text'
-            sx={{height: 90, overflow: 'hidden'}}>{project.description}</Typography>
+            >{project.description}</Typography>
+            {/* sx={{height: 90, overflow: 'hidden'}}>{project.description}</Typography> */} {/*temp until modal implemented*/}
         </CardContent>
       </CardActionArea>
       <CardActions sx={{display: 'flex', justifyContent: 'flex-end'}}>
@@ -70,13 +74,13 @@ function ProjectCard({ project = {
           direction="row"
           spacing={1}
         >
-          <IconButton aria-label='Demo' size='small' disabled={project.demo == null} target='_blank' href={`${project.links ? project.links[0] : ""}`}>
+          <IconButton aria-label='Demo' size='small' disabled={project.demo == null} target='_blank' href={`${project.demo ? project.demo : ""}`}>
             <PlayArrowOutlinedIcon fontSize="inherit" />
           </IconButton>
           <IconButton aria-label='Link' size='small' disabled={project.links.length == 0} target='_blank' href={`${project.links ? project.links[0] : ""}`}>
             <LinkOutlined fontSize='inherit'></LinkOutlined>
           </IconButton>
-          <IconButton aria-label='GitHub' size='small'>
+          <IconButton aria-label='GitHub' size='small' disabled={project.github == null} target='_blank' href={`${project.github ? project.github : ""}`}>
             <GitHubIcon fontSize="inherit" />
           </IconButton>
         </Stack>
@@ -85,26 +89,6 @@ function ProjectCard({ project = {
         </Button> */}
       </CardActions>
     </Card>
-    // <Card style={{ width: '18rem' }}>
-    //   {/* <Card.Img variant="top" src="holder.js/100px180? text=Image" /> */}
-    //   <Card.Img variant="top" src={ProjectImage} />
-    //   {/* <Card.ImgOverlay variant="bottom"> */}
-    //     <Card.Body>
-    //       <Card.Title>Project 1</Card.Title>
-    //       <Card.Text>
-    //         Some quick example text to build on the card title and make up the
-    //         bulk of the card's content.
-    //       </Card.Text>
-    //     </Card.Body>
-    //   {/* </Card.ImgOverlay> */}
-    //   <ListGroup className="list-group-flush">
-    //     <ListGroup.Item>Featured Skills:</ListGroup.Item>
-    //     <ListGroup.Item>Date:</ListGroup.Item>
-    //   </ListGroup>
-    //   <Card.Body>
-    //     <Button variant="primary">Github</Button>
-    //   </Card.Body>
-    // </Card>
   );
 }
 

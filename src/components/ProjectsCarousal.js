@@ -69,26 +69,26 @@ const slides = [
         descBase: false,
         demo: "",
     },
-    {
-        title: "Big 2",
-        subtitle: "An Alternate Version",
-        description: "An altered version of the game Big 2 in Java with a graphic user interface \
-            through Swing and layering multiple JFrames and JPanels",
-        image: Big2Cover,
-        color: "white",
-        descBase: false,
-        demo: demo,
-    },
-    {
-        title: "Gallery Manager",
-        subtitle: "",
-        description: "Helping manage galleries and art pieces by processing data on the gallery \
-            or art piece onto a database for the client to query and track related attributes",
-        image: GalleryManagerCover,
-        color: "white",
-        descBase: false,
-        demo: "",
-    },
+    // {
+    //     title: "Big 2",
+    //     subtitle: "An Alternate Version",
+    //     description: "An altered version of the game Big 2 in Java with a graphic user interface \
+    //         through Swing and layering multiple JFrames and JPanels",
+    //     image: Big2Cover,
+    //     color: "white",
+    //     descBase: false,
+    //     demo: demo,
+    // },
+    // {
+    //     title: "Gallery Manager",
+    //     subtitle: "",
+    //     description: "Helping manage galleries and art pieces by processing data on the gallery \
+    //         or art piece onto a database for the client to query and track related attributes",
+    //     image: GalleryManagerCover,
+    //     color: "white",
+    //     descBase: false,
+    //     demo: "",
+    // },
 ]
 
 function useTilt(active) {

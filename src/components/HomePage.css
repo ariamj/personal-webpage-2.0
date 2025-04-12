@@ -43,6 +43,7 @@ body {
     /* top: 10%; */
     height: 100vh;
     scroll-snap-align: start;
+    scroll-margin-top: 30px;
     justify-content: center;
     align-items: center;
     position: relative;
