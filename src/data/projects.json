@@ -1,0 +1,94 @@
+[
+    {
+        "title": "Shopping Assistant",
+        "subtitle": "Prototype",
+        "skills": ["Figma"],
+        "description": "With the completion of executing UX research, a prototype of a proposed design to build a personal shopper who helps with composing a concise and complete list of items one would need to buy to cook recipes. The protype went through usability testing and evalutions to ensure it met expected UX goals. \n Figma: https://bit.ly/43yWmol",
+        "image": "forest.jpg",
+        "demo": "https://www.figma.com/proto/XLhB1KSVR0TY0rwynkjHTb/CPSC344-Mid-Fi-Prototype?node-id=0-1&t=qi5u7ctfvWcHzfER-1",
+        "linkName": "Prototype",
+        "link": "https://www.figma.com/proto/XLhB1KSVR0TY0rwynkjHTb/CPSC344-Mid-Fi-Prototype?node-id=0-1&t=qi5u7ctfvWcHzfER-1",
+        "links": ["https://bit.ly/43yWmol"],
+        "github": null
+    },
+    {
+        "title": "Steam Games",
+        "subtitle": "",
+        "skills": ["D3", "JavaScript", "HTML", "CSS"],
+        "description": "Using JavaScript, HTML, CSS, and the D3 library, my team and I designed and created visualizations from scratch to compare and contrast data from Steam. Graphs are bidirectionally linked and made interactive to expose more data for users to view.",
+        "image": "steam_games.png",
+        "demo": null,
+        "links": [],
+        "github": null
+    },
+    {
+        "title": "Personal Website",
+        "subtitle": "Prototype",
+        "skills": ["React", "HTML", "CSS", "Javascript"],
+        "description": "Designed and developed a website interface using React and Javascript, giving a more coherent and dynamic UI while utilizing React component libraries such as MUI, Ant-Design, and Bootstrap to create base components that are then customized with CSS",
+        "image": "Auroras_sig.png",
+        "demo": null,
+        "links": ["https://ariannaj.vercel.app/"],
+        "github": "https://github.com/ariamj/personal-webpage-2.0"
+    },
+    {
+        "title": "[ML] Default Payments of Credit Card Clients",
+        "subtitle": "",
+        "skills": ["Python", "Scikit-Learn", "Pandas"],
+        "description": "Using Python and machine learning, we predict if a client of a credit card company will default on their next payment or not.",
+        "image": "ml_card_default_cover.png",
+        "demo": null,
+        "links": ["https://www.notion.so/Are-you-going-to-default-your-next-bill-Predict-who-will-153b401acae9809d84d5d6969182b5df?pvs=25"],
+        "github": null
+    },
+    {
+        "title": "Harmonic Hustle",
+        "subtitle": "A Rythm Game",
+        "skills": ["OpenGL", "C++", "FreeType"],
+        "description": "Using C++ and OpenGL, develop a user-interactive rhythm-based game that contains multiple different scenes along with key-mapping and audio based on ECS pattern",
+        "image": "Harmonic_Hustle.png",
+        "demo": null,
+        "links": [],
+        "github": "https://github.com/ariamj/Harmonic-Hustle"
+    },
+    {
+        "title": "Insight UBC",
+        "subtitle": "",
+        "skills": ["TypeScript", "Node", "JavaScript", "HTML", "CSS", "REST APIs", "Mocha", "Chai"],
+        "description": "Using HTML and CSS, developed the user interface and JavaScript to send and get REST API calls to and from the server to query a dataset",
+        "image": "Insight_UBC.png",
+        "demo": null,
+        "links": [],
+        "github": null
+    },
+    {
+        "title": "Gallery Manager",
+        "subtitle": "",
+        "skills": ["SQL", "Oracle", "HTML", "CSS", "PHP", "Figma"],
+        "description": "Helping manage galleries and art pieces by processing data on the gallery or art piece onto a database for the client to query and track related attributes",
+        "image": "Gallery_Manager.png",
+        "demo": null,
+        "links": ["https://www.students.cs.ubc.ca/~tc2780/304GalleryManager/index.php"],
+        "github": "https://github.com/ariamj/GalleryManagerSite"
+    },
+    {
+        "title": "Sooup: The Check-In Site",
+        "subtitle": "",
+        "skills": ["Javascript", "HTML"],
+        "description": "Team-based project to create a website--with potential for plug-in--where people can quickly check in with loved ones and feel at ease.",
+        "image": "forest.jpg",
+        "demo": null,
+        "links": [],
+        "github": "https://github.com/ariamj/Mental-Health-Check-In"
+    },
+    {
+        "title": "Big 2",
+        "subtitle": "An Alternate Version",
+        "skills": ["Java", "JUnit", "JSON", "Swing"],
+        "description": "An altered version of the game Big 2 in Java with a graphic user interface through Swing and layering multiple JFrames and JPanels",
+        "image": "Big_2.png",
+        "demo": "https://youtu.be/UtmRNijrMRI",
+        "links": [],
+        "github": "https://github.com/ariamj/Big2-Game"
+    }
+]

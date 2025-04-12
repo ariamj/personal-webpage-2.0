@@ -3,13 +3,15 @@ import { useState } from 'react';
 import Tab from 'react-bootstrap/Tab';
 // import Tabs from 'react-bootstrap/Tabs';
 import HomeIntro from './HomePage';
-import ProjectsPage from './ProjectsPage';
+import ProjectsCarousal from './ProjectsCarousal';
 
 import { Tabs, theme, Button, Flex, Image } from "antd"
 import StickyBox from 'react-sticky-box';
 import { render } from '@testing-library/react';
 import { GithubOutlined, LinkedinOutlined } from '@ant-design/icons';
 import ContactPage from './ContactPage';
+// import TestPage from './TestPage';
+import ProjectsPage from './ProjectsPage';
 
 function NavTabs() {
     // const [key, setKey] = useState('home');
@@ -39,6 +41,11 @@ function NavTabs() {
             key: 'contact',
             children: <ContactPage></ContactPage>
         },
+        // {
+        //     label: 'Test',
+        //     key: 'test',
+        //     children: <TestPage></TestPage>
+        // },
     );
 
     const { token: { colorBgContainer } } = theme.useToken();
