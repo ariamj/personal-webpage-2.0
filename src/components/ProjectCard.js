@@ -6,7 +6,7 @@ import GitHubIcon from "@mui/icons-material/GitHub";
 import PlayArrowIcon from "@mui/icons-material/PlayArrow";
 import PlayArrowOutlinedIcon from '@mui/icons-material/PlayArrowOutlined';
 
-import { Button, Card, CardActionArea, CardActions, CardContent, CardMedia, IconButton, Stack, Typography } from '@mui/material';
+import { Button, Card, CardActionArea, CardActions, CardContent, CardMedia, IconButton, Stack, Tooltip, Typography } from '@mui/material';
 import { LinkOutlined } from '@ant-design/icons';
 
 // function ProjectCard({
@@ -74,15 +74,21 @@ function ProjectCard({ project = {
           direction="row"
           spacing={1}
         >
-          <IconButton aria-label='Demo' size='small' disabled={project.demo == null} target='_blank' href={`${project.demo ? project.demo : ""}`}>
-            <PlayArrowOutlinedIcon fontSize="inherit" />
-          </IconButton>
-          <IconButton aria-label='Link' size='small' disabled={project.links.length == 0} target='_blank' href={`${project.links ? project.links[0] : ""}`}>
-            <LinkOutlined fontSize='inherit'></LinkOutlined>
-          </IconButton>
-          <IconButton aria-label='GitHub' size='small' disabled={project.github == null} target='_blank' href={`${project.github ? project.github : ""}`}>
-            <GitHubIcon fontSize="inherit" />
-          </IconButton>
+          <Tooltip title="Demo">
+            <IconButton aria-label='Demo' size='small' disabled={project.demo == null} target='_blank' href={`${project.demo ? project.demo : ""}`}>
+              <PlayArrowOutlinedIcon fontSize="inherit" />
+            </IconButton>
+          </Tooltip>
+          <Tooltip title="Link">
+            <IconButton aria-label='Link' size='small' disabled={project.links.length == 0} target='_blank' href={`${project.links ? project.links[0] : ""}`}>
+              <LinkOutlined fontSize='inherit'></LinkOutlined>
+            </IconButton>
+          </Tooltip>
+          <Tooltip title="GitHub Repo">
+            <IconButton aria-label='GitHub' size='small' disabled={project.github == null} target='_blank' href={`${project.github ? project.github : ""}`}>
+              <GitHubIcon fontSize="inherit" />
+            </IconButton>
+          </Tooltip>
         </Stack>
         {/* <Button size='small' color='primary'>
           <Typography variant='button' sx={{fontSize: '0.5rem'}}>GitHub</Typography>
