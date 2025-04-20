@@ -29,9 +29,9 @@ body {
     /* min-height: 100vh; */
     /* background-color: red; */
     /* overflow-y: hidden; */
-    background-image: url("../assets/img/bubbles_static.png");
-    background-color: rgba(0, 0, 0, 0.5);
-    background-blend-mode: color-burn;
+    /* background-image: url("../assets/img/bubbles_static.png"); */
+    background-color: rgba(0, 0, 0, 1);
+    /* background-blend-mode: color-burn; */
     /* background-size: cover; */
     background-attachment: fixed;
     background-position: bottom right;
@@ -43,8 +43,9 @@ body {
 .section {
     /* top: 10%; */
     height: 100vh;
+    width: 100vw;
     scroll-snap-align: start;
-    scroll-margin-top: 30px;
+    scroll-margin-top: -30px;
     justify-content: center;
     align-items: center;
     position: relative;

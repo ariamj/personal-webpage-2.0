@@ -6,8 +6,9 @@ import internshipData from '../data/experience.json'
 
 function Experience() {
     return (
-        <motion.div>
+        <motion.div style={{width: '100vw'}}>
             <motion.div
+                className="section-header"
                 initial={{opacity: 0}}
                 transition={{duration: 0.9, ease: [0.17, 0.55, 0.55, 1]}}
                 whileInView={{opacity: 1}}
@@ -17,11 +18,11 @@ function Experience() {
                     sx={{
                         marginBottom: 5,
                         color: 'white',
-                        marginLeft: 5
+                        // marginLeft: 5
                     }}
                 >Internships</Typography>
             </motion.div>
-            <Box sx={{maxWidth: '100%'}}>
+            <Box className="section-inner" sx={{maxWidth: '100%'}}>
                 <Grid container spacing={3} justifyContent="space-around">
                     {internshipData.map((internship, idx) => (
                         <motion.div 
@@ -29,6 +30,7 @@ function Experience() {
                             transition={{duration: 0.9, ease: [0.17, 0.55, 0.55, 1]}}
                             whileInView={{opacity: 1, x: 0}}
                             viewport={{amount: 0.5}}
+                            key={idx}
                         >
                             <ExpCard exp={internship}/>
                         </motion.div>
