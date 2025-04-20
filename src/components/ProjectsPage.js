@@ -8,7 +8,6 @@ import { motion, useAnimate, useInView } from "motion/react"
 import { animate, inView } from "motion";
 
 import data from '../data/projects.json'
-console.log("Projects Data: ", data);
 
 const projectCards = data.map((proj, i) => {
     return {

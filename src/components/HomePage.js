@@ -37,6 +37,9 @@ function HomeIntro() {
                         background in arts, it is particularly statisfiable and appreciative to be able to bring a vision 
                         to life. Whether that be in the form of an application, or simply, a nicely done UI.
                     </Paragraph>
+                    <Paragraph>
+                        Fun fact: All art used on this site was created by me :)
+                    </Paragraph>
                 </Flex>
             </Flex>
             <Flex className='section exp-section' justify='space-evenly' align='center'>
