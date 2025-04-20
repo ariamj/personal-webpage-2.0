@@ -4,7 +4,6 @@ import { motion } from 'motion/react';
 import { Tag } from 'antd';
 
 function TagsList(props) {
-    console.log("props tags: ", props.tags)
 
     return (
         <motion.div>
