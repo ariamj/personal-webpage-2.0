@@ -1,4 +1,5 @@
 import './ExpCard.css'
+import '../App.css'
 import { Box, Card, CardContent, Container, Grid, Typography } from "@mui/material";
 import { complex, motion } from "motion/react";
 import { useState } from 'react';
@@ -8,7 +9,13 @@ function ExpCard(props) {
 	const toggleHover = () => setHovered(!hovered);
 
 	return (
-		<motion.div>
+		<motion.div 
+			className={hovered ? "bubbles" : ""}
+			style={{
+				borderRadius: 20,
+				backgroundPosition: `${Math.random()*100}% ${Math.random()*100}%`
+			}}
+		>
 			<Card 
 				className={hovered ? "glass" : ""}
 				onMouseEnter={toggleHover}

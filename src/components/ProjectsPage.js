@@ -70,6 +70,7 @@ function ProjectsPage() {
                                 transition={{duration: 0.9, ease: [0.17, 0.55, 0.55, 1]}}
                                 whileInView={{opacity: 1, x: 0}}
                                 viewport={{amount: 0.5}}
+                                key={project.id}
                             >
                                 <ProjectCard project={project}/>
                             </motion.div>
