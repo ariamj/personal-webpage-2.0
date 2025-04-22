@@ -15,6 +15,9 @@ body {
   background-color: #121212;
   color: #fff;
   font-family: 'Centra', sans-serif;
+
+  white-space: pre-line;
+  vertical-align: bottom;
 }
 
 /* GLOABAL STYLES */
