@@ -3,10 +3,10 @@
         "title": "Steam Games",
         "subtitle": "",
         "skills": ["D3", "JavaScript", "HTML", "CSS"],
-        "description": "Using JavaScript, HTML, CSS, and the D3 library, my team and I designed and created visualizations from scratch to compare and contrast data from Steam. Graphs are bidirectionally linked and made interactive to expose more data for users to view.",
+        "description": "Featured in our cohorts' Hall of Fame!\n Using JavaScript, HTML, CSS, and the D3 library, my team and I designed and created visualizations from scratch to compare and contrast data from Steam. Graphs are bidirectionally linked and made interactive to expose more data for users to view.",
         "image": "steam_games.png",
-        "demo": null,
-        "links": ["https://steam-games-data-visualizer.vercel.app/"],
+        "demo": "https://steam-games-data-visualizer.vercel.app/",
+        "links": ["https://www.students.cs.ubc.ca/~cs-447/25Jan/fame/"],
         "github": "https://github.com/ariamj/steam-games-data-visualizer"
     },
     {
