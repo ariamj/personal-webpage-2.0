@@ -10,8 +10,10 @@ import StickyBox from 'react-sticky-box';
 import { render } from '@testing-library/react';
 import { GithubOutlined, LinkedinOutlined } from '@ant-design/icons';
 import ContactPage from './ContactPage';
-// import TestPage from './TestPage';
+import TestPage from './TestPage';
 import ProjectsPage from './ProjectsPage';
+import { Tooltip } from '@mui/material';
+import ArtPage from './ArtPage';
 
 function NavTabs() {
     // const [key, setKey] = useState('home');
@@ -41,11 +43,16 @@ function NavTabs() {
             key: 'contact',
             children: <ContactPage></ContactPage>
         },
-        // {
-        //     label: 'Test',
-        //     key: 'test',
-        //     children: <TestPage></TestPage>
-        // },
+        {
+            label: 'Art',
+            key: 'art',
+            children: <ArtPage></ArtPage>
+        },
+        {
+            label: 'Test',
+            key: 'test',
+            children: <TestPage></TestPage>
+        },
     );
 
     const { token: { colorBgContainer } } = theme.useToken();
@@ -66,8 +73,12 @@ function NavTabs() {
 
     const contact = (
         <Flex className='contact-btns' gap="small" justify='space-between'>
-            <Button className='github-contact' href='https://github.com/ariamj' target='_blank' icon={<GithubOutlined />}/>
-            <Button className='linked-contact' href='https://www.linkedin.com/in/arianna-joe' target='_blank' icon={<LinkedinOutlined />}/>
+            <Tooltip title="GitHub">
+                <Button className='github-contact' href='https://github.com/ariamj' target='_blank' icon={<GithubOutlined />}/>
+            </Tooltip>
+            <Tooltip title="LinkedIn">
+                <Button className='linked-contact' href='https://www.linkedin.com/in/arianna-joe' target='_blank' icon={<LinkedinOutlined />}/>
+            </Tooltip>
         </Flex>
     )
 
