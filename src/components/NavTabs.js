@@ -10,7 +10,7 @@ import StickyBox from 'react-sticky-box';
 import { render } from '@testing-library/react';
 import { GithubOutlined, LinkedinOutlined } from '@ant-design/icons';
 import ContactPage from './ContactPage';
-import TestPage from './TestPage';
+// import TestPage from './TestPage';
 import ProjectsPage from './ProjectsPage';
 import { Tooltip } from '@mui/material';
 import ArtPage from './ArtPage';
@@ -48,11 +48,11 @@ function NavTabs() {
             key: 'art',
             children: <ArtPage></ArtPage>
         },
-        {
-            label: 'Test',
-            key: 'test',
-            children: <TestPage></TestPage>
-        },
+        // {
+        //     label: 'Test',
+        //     key: 'test',
+        //     children: <TestPage></TestPage>
+        // },
     );
 
     const { token: { colorBgContainer } } = theme.useToken();

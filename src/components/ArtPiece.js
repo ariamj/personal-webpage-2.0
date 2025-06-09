@@ -3,9 +3,10 @@ import { Image } from 'antd';
 import { motion } from 'motion/react'
 
 function srcset(image, size, rows = 1, cols = 1) {
+    console.log("IMAGE SRCSET: ", image);
     return {
-        src: `${require(`../assets/img/${image}`)}?w=${size * cols}&h=${size * rows}&fit=crop&auto=format`,
-        srcSet: `${require(`../assets/img/${image}`)}?size * cols}&h=${size * rows}&fit=crop&auto=format&dpr=2 2x`,
+        src: `${require(`../../public/images/art_gallery/${image}`)}?w=${size * cols}&h=${size * rows}&fit=crop&auto=format`,
+        srcSet: `${require(`../../public/images/art_gallery/${image}`)}?w=${size * cols}&h=${size * rows}&fit=crop&auto=format&dpr=2 2x`,
     };
 };
 
@@ -18,47 +19,17 @@ function ArtPiece(props) {
     }
 
     return (
-        <Box
-            sx={{
-                backgroundColor: 'purple',
-                height: props.height,
-                width: props.width,
-            }}
+        <ImageListItem
+            cols={1}
+            rows={1}
         >
-            {props.title}
-            <ImageList
-                sx={{
-                    width: 500,
-                    height: 450,
-                }}
-                variant='quilted'
-                cols={4}
-                rowHeight={121}
-            >
-                <ImageListItem
-                    cols={1}
-                    rows={1}
-                >
-                    <img
-                        {...srcset(item.img, 121, item.rows, item.cols)}
-                        alt={item.title}
-                        loading='lazy'
-                    />
-                </ImageListItem>
-                {/* {itemData.map((item) =>  (
-                    <ImageListItem
-                        cols={1}
-                        rows={1}
-                    >
-                        <img
-                            {...srcset(item.img, 121, item.rows, item.cols)}
-                            alt={item.title}
-                            loading='lazy'
-                        />
-                    </ImageListItem>
-                ))} */}
-            </ImageList>
-        </Box>
+            <img
+                {...srcset(item.img, 121, item.rows, item.cols)}
+                alt={item.title}
+                loading='lazy'
+            />
+        </ImageListItem>
+        // <Image key={item.img} src={`/images/art_gallery/${item.img}`} width={200} preview={true}></Image>
     );
 }
 
