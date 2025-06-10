@@ -1,6 +1,5 @@
-import { Box, ImageList, ImageListItem } from '@mui/material';
+import { ImageListItem } from '@mui/material';
 import { Image } from 'antd';
-import { motion } from 'motion/react'
 
 function srcset(image, size, rows = 1, cols = 1) {
     console.log("IMAGE SRCSET: ", image);
@@ -19,10 +18,7 @@ function ArtPiece(props) {
     }
 
     return (
-        <ImageListItem
-            cols={1}
-            rows={1}
-        >
+        <ImageListItem cols={1} rows={1} sx={{ border: '5px solid white'}}>
             <img
                 {...srcset(item.img, 121, item.rows, item.cols)}
                 alt={item.title}

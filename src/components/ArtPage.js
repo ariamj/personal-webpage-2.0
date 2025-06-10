@@ -1,18 +1,9 @@
-import { Box, Button, Grid, ImageList } from '@mui/material';
+import { Box, Grid, ImageList } from '@mui/material';
 import { motion } from 'motion/react'
 import ArtPiece from './ArtPiece';
 import { useEffect, useState } from 'react';
 
 function ArtPage() {
-    const [data, setData] = useState(null);
-
-    useEffect(() => {
-        fetch('http://localhost:8080/api/art-gallery-files')
-            .then(response => response.json())
-            .then(data => setData(data));
-    }, []);
-
-    console.log("Data from Effect: ", data);
     const [fileNames, setFileNames] = useState([]);
 
     async function getArtFileNames() {
@@ -29,57 +20,44 @@ function ArtPage() {
         }
     }
 
+    useEffect(() => {
+        getArtFileNames()
+    }, []);
+
     return (
         <motion.div
             className='art-tab'
             style={{
                 minHeight: '92.5vh',
                 height: '100%',
-                backgroundColor: 'red',
+                padding: '5%',
+                background: 'black'
             }}
         >
-            <motion.h1>ART</motion.h1>
-            <Button onClick={() => getArtFileNames()}>Call FileName API</Button>
-            {fileNames && console.log("FileNames: ", fileNames)}
+            <motion.h1
+                initial={{opacity: 0}}
+                transition={{duration: 0.9, ease: [0.17, 0.55, 0.55, 1]}}
+                whileInView={{opacity: 1}}
+                viewport={{amount : "all"}}
+                style={{ color: 'white', marginBottom: '5%' }}
+            >Art Archive</motion.h1>
             <motion.div>
                 <Grid
                     container
                     spacing={3}
                     width={'80vw'}
-                    sx={{
-                        backgroundColor: 'blue',
-                    }}
                     justifyContent='space-around'
                     justifySelf='center'
                 >
-                    <Box
-                        sx={{
-                            backgroundColor: 'purple',
-                            // height: 200,
-                            // width: 250,
-                        }}
-                    >
-                        <ImageList
-                            sx={{
-                                // width: 500,
-                                // height: 450,
-                            }}
-                            variant='masonry'
-                            cols={4}
-                            gap={8}
-                            // rowHeight={121}
-                        >
+                    <Box>
+                        <ImageList variant='masonry' cols={4} gap={8}>
                             {fileNames && fileNames.map((file) => (
-                                <ArtPiece image={file} height={200} width={300}/>
+                                <motion.div>
+                                    <ArtPiece image={file} height={200} width={300}/>
+                                </motion.div>
                             ))}
                         </ImageList>
                     </Box>
-                    {/* {fileNames && fileNames.map((file) => (
-                        <ArtPiece image={file} height={200} width={300}/>
-                    ))} */}
-                    {/* <ArtPiece image='forest.jpg' title='Image 0' height={200} width={300}/>
-                    <ArtPiece image='Onward.png' title='Image 1' height={200} width={250}/>
-                    <ArtPiece image='Petals.png' title='Image 2' height={300} width={250}/> */}
                 </Grid>
             </motion.div>
         </motion.div>

@@ -39,14 +39,14 @@ function NavTabs() {
             children: <ProjectsPage></ProjectsPage>
         },
         {
-            label: 'Contact',
-            key: 'contact',
-            children: <ContactPage></ContactPage>
-        },
-        {
             label: 'Art',
             key: 'art',
             children: <ArtPage></ArtPage>
+        },
+        {
+            label: 'Contact',
+            key: 'contact',
+            children: <ContactPage></ContactPage>
         },
         // {
         //     label: 'Test',
