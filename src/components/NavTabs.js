@@ -12,6 +12,8 @@ import { GithubOutlined, LinkedinOutlined } from '@ant-design/icons';
 import ContactPage from './ContactPage';
 // import TestPage from './TestPage';
 import ProjectsPage from './ProjectsPage';
+import { Tooltip } from '@mui/material';
+import ArtPage from './ArtPage';
 
 function NavTabs() {
     // const [key, setKey] = useState('home');
@@ -35,6 +37,11 @@ function NavTabs() {
             label: 'Projects',
             key: 'projects',
             children: <ProjectsPage></ProjectsPage>
+        },
+        {
+            label: 'Art',
+            key: 'art',
+            children: <ArtPage></ArtPage>
         },
         {
             label: 'Contact',
@@ -66,8 +73,12 @@ function NavTabs() {
 
     const contact = (
         <Flex className='contact-btns' gap="small" justify='space-between'>
-            <Button className='github-contact' href='https://github.com/ariamj' target='_blank' icon={<GithubOutlined />}/>
-            <Button className='linked-contact' href='https://www.linkedin.com/in/arianna-joe' target='_blank' icon={<LinkedinOutlined />}/>
+            <Tooltip title="GitHub">
+                <Button className='github-contact' href='https://github.com/ariamj' target='_blank' icon={<GithubOutlined />}/>
+            </Tooltip>
+            <Tooltip title="LinkedIn">
+                <Button className='linked-contact' href='https://www.linkedin.com/in/arianna-joe' target='_blank' icon={<LinkedinOutlined />}/>
+            </Tooltip>
         </Flex>
     )
 
