@@ -30,7 +30,7 @@ function HomeIntro() {
             <Flex className='section intro-section' justify='space-evenly' align='center'>
                 <Flex className='section-inner intro' vertical align='flex-start' justify='center' ref={scrollRef}>
                     <Title className="name">Arianna</Title>
-                    <Title level={3} className="sub-info" italic>4th year, UBC Computer Science Major</Title>
+                    <Title level={3} className="sub-info" italic>New grad UBC Computer Science Major</Title>
                     <Paragraph className="intro-description">
                         Hello, welcome to my page! I am a fast learner who enjoys challenging myself to 
                         create unique products that can make an impact. With a 
