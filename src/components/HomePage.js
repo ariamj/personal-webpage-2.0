@@ -4,7 +4,6 @@ import { Typography, Image, Flex, Tag, ConfigProvider } from 'antd';
 import pic from "../assets/img/bubbles_static.png"
 import gif from "../assets/img/bubbles_animated.GIF"
 import { useRef } from 'react';
-import useScrollSnap from 'react-use-scroll-snap';
 import * as motion from "motion/react-client";
 // import { Typography } from '@mui/material';
 import ExpCard from "./ExpCard.js"
