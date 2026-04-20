@@ -1,10 +1,8 @@
 import './HomePage.css'
 import { Typography, Image, Flex, Tag, ConfigProvider } from 'antd';
-// import useScrollSnap from "./useScrollSnap";
 import pic from "../assets/img/bubbles_static.png"
 import gif from "../assets/img/bubbles_animated.GIF"
 import { useRef } from 'react';
-import useScrollSnap from 'react-use-scroll-snap';
 import * as motion from "motion/react-client";
 // import { Typography } from '@mui/material';
 import ExpCard from "./ExpCard.js"
@@ -16,7 +14,6 @@ const { Title, Paragraph, Text } = Typography
 
 function HomeIntro() {
     const scrollRef = useRef(null);
-    // useScrollSnap({ref: scrollRef, duration: 50, delay: 20 });
 
     const box = {
         width: 100,
@@ -30,7 +27,7 @@ function HomeIntro() {
             <Flex className='section intro-section' justify='space-evenly' align='center'>
                 <Flex className='section-inner intro' vertical align='flex-start' justify='center' ref={scrollRef}>
                     <Title className="name">Arianna</Title>
-                    <Title level={3} className="sub-info" italic>4th year, UBC Computer Science Major</Title>
+                    <Title level={3} className="sub-info" italic>New grad UBC Computer Science Major</Title>
                     <Paragraph className="intro-description">
                         Hello, welcome to my page! I am a fast learner who enjoys challenging myself to 
                         create unique products that can make an impact. With a 
