@@ -1,3 +1,4 @@
+/* eslint-disable no-multi-str */
 import React from "react";
 import './ProjectsCarousal.css'
 import { Button } from 'antd'
