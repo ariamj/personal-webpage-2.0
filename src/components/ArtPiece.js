@@ -1,5 +1,4 @@
 import { ImageListItem } from '@mui/material';
-import { Image } from 'antd';
 
 function srcset(image, size, rows = 1, cols = 1) {
     console.log("IMAGE SRCSET: ", image);
@@ -25,7 +24,6 @@ function ArtPiece(props) {
                 loading='lazy'
             />
         </ImageListItem>
-        // <Image key={item.img} src={`/images/art_gallery/${item.img}`} width={200} preview={true}></Image>
     );
 }
 

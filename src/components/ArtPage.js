@@ -1,28 +1,8 @@
 import { Box, Grid, ImageList } from '@mui/material';
 import { motion } from 'motion/react'
 import ArtPiece from './ArtPiece';
-import { useEffect, useState } from 'react';
 
 function ArtPage() {
-    const [fileNames, setFileNames] = useState([]);
-
-    async function getArtFileNames() {
-        try {
-            const response = await fetch("http://localhost:8080/api/art-gallery-files");
-            if (!response.ok) {
-                throw new Error(`HTTP error: , ${response.status}`);
-            }
-            const data = await response.json();
-            setFileNames(data.data);
-            console.log(data);
-        } catch (error) {
-            console.error("error message: ", error);
-        }
-    }
-
-    useEffect(() => {
-        // getArtFileNames()
-    }, []);
 
     const artGalleryImages = [
         "Auroras_dig.png",

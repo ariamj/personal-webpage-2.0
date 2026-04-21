@@ -1,13 +1,8 @@
 import './NavTabs.css'
-import { useState } from 'react';
-import Tab from 'react-bootstrap/Tab';
-// import Tabs from 'react-bootstrap/Tabs';
 import HomeIntro from './HomePage';
-import ProjectsCarousal from './ProjectsCarousal';
 
-import { Tabs, theme, Button, Flex, Image } from "antd"
+import { Tabs, theme, Button, Flex } from "antd"
 import StickyBox from 'react-sticky-box';
-import { render } from '@testing-library/react';
 import { GithubOutlined, LinkedinOutlined } from '@ant-design/icons';
 import ContactPage from './ContactPage';
 // import TestPage from './TestPage';
@@ -16,18 +11,8 @@ import { Tooltip } from '@mui/material';
 import ArtPage from './ArtPage';
 
 function NavTabs() {
-    // const [key, setKey] = useState('home');
 
-    // const tab_items = new Array(3).fill(null).map((_, i) => {
-    //     const id = String(i + 1);
-    //     return {
-    //         label: `Tab ${id}`,
-    //         key: id,
-    //         children: `Content of Tab Pane ${id}`,
-    //     };
-    // })
-
-    const tab_items = new Array(
+    const tab_items = [
         {
             label: 'About Me',
             key: 'home',
@@ -53,7 +38,7 @@ function NavTabs() {
         //     key: 'test',
         //     children: <TestPage></TestPage>
         // },
-    );
+    ]
 
     const { token: { colorBgContainer } } = theme.useToken();
 
@@ -92,29 +77,6 @@ function NavTabs() {
             tabBarExtraContent={ contact }
             items= { tab_items }
         />
-        // <Tabs 
-        //     id="main-pages-tabs" 
-        //     variant="underline" 
-        //     activeKey={key} 
-        //     onSelect={(k) => setKey(k)} 
-        //     className="nav-tabs"
-        //     justify
-        // >
-        //     <Tab eventKey="home" title="Home">
-        //         Tabe content for Home
-        //         <HomeIntro></HomeIntro>
-        //     </Tab>
-        //     <Tab eventKey="profile" title="Profile">
-        //         Tab content for Profile
-        //     </Tab>
-        //     <Tab eventKey="project" title="Projects">
-        //         Tab content for Projects
-        //         <ProjectsPage></ProjectsPage>
-        //     </Tab>
-        //     <Tab eventKey="contact" title="Contact" disabled>
-        //         Tab content for Contact
-        //     </Tab>
-        // </Tabs>
     );
 }
 
