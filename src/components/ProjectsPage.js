@@ -1,11 +1,8 @@
-import React, { useEffect } from "react";
-import {useRef} from "react";
 import './ProjectsPage.css'
 import ProjectsCarousal from "./ProjectsCarousal";
 import ProjectCard from "./ProjectCard";
 import { Box, Grid, Typography } from "@mui/material";
-import { motion, useAnimate, useInView } from "motion/react"
-import { animate, inView } from "motion";
+import { motion } from "motion/react"
 
 import data from '../data/projects.json'
 
@@ -17,34 +14,6 @@ const projectCards = data.map((proj, i) => {
 });
 
 function ProjectsPage() {
-    // const ref = useRef(null)
-    // const [scope, animate] = useAnimate();
-    // const isInView = useInView(scope);
-
-    // useEffect(() => {
-    //     if (isInView) {
-    //         animate(scope.current, 
-    //             { opacity: 1 },
-    //             {
-    //                 duration: 0.9,
-    //                 easing: [0.17, 0.55, 0.55, 1],
-    //             }
-    //         );
-    //     }
-    // }, [isInView]);
-
-    // inView(".proj-card", (element) => {
-    //     const animation = animate(
-    //         element,
-    //         { opacity: 1, x: [-100, 0] },
-    //         {
-    //             duration: 0.9,
-    //             easing: [0.17, 0.55, 0.55, 1],
-    //         }
-    //     )
-    //     return () => animate(element, { opacity: 0, x: -100 })
-    //     // return () => animation.stop();
-    // })
 
     return (
         <div>

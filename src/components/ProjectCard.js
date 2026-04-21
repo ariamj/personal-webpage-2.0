@@ -1,25 +1,13 @@
-// import Button from 'react-bootstrap/Button';
-// import Card from 'react-bootstrap/Card';
-import ListGroup from 'react-bootstrap/ListGroup';
-import ProjectImage from '../assets/img/bubbles_static.png'
 import GitHubIcon from "@mui/icons-material/GitHub";
-import PlayArrowIcon from "@mui/icons-material/PlayArrow";
 import PlayArrowOutlinedIcon from '@mui/icons-material/PlayArrowOutlined';
 
-import { Button, Card, CardActionArea, CardActions, CardContent, CardMedia, IconButton, Stack, Tooltip, Typography } from '@mui/material';
+import { Card, CardActionArea, CardActions, CardContent, CardMedia, IconButton, Stack, Tooltip, Typography } from '@mui/material';
 import { LinkOutlined } from '@ant-design/icons';
 
-// function ProjectCard({
-//   title = "Title", 
-//   skills = ["JavaScript", "HTML", "CSS"],
-//   description = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.", 
-//   image = 'Onward.png', 
-//   link
-// }) {
 
 const cardHeight = 390;
 const imgHeight = 133;
-const bodyHeight = (cardHeight - imgHeight) * 0.8;
+// const bodyHeight = (cardHeight - imgHeight) * 0.8;
 
 function ProjectCard({ project = {
     title: "Title", 
@@ -29,8 +17,6 @@ function ProjectCard({ project = {
     links: [],
     demo: null,
   } }) {
-  // let coverImage = image ? image : '../assets/img/Onward.png';
-  // console.log(image);
 
   return (
     <Card className='card' 
@@ -80,7 +66,7 @@ function ProjectCard({ project = {
             </IconButton>
           </Tooltip>
           <Tooltip title="Link">
-            <IconButton aria-label='Link' size='small' disabled={project.links.length == 0} target='_blank' href={`${project.links ? project.links[0] : ""}`}>
+            <IconButton aria-label='Link' size='small' disabled={project.links.length === 0} target='_blank' href={`${project.links ? project.links[0] : ""}`}>
               <LinkOutlined fontSize='inherit'></LinkOutlined>
             </IconButton>
           </Tooltip>
@@ -90,9 +76,6 @@ function ProjectCard({ project = {
             </IconButton>
           </Tooltip>
         </Stack>
-        {/* <Button size='small' color='primary'>
-          <Typography variant='button' sx={{fontSize: '0.5rem'}}>GitHub</Typography>
-        </Button> */}
       </CardActions>
     </Card>
   );

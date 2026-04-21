@@ -1,26 +1,13 @@
 import './HomePage.css'
-import { Typography, Image, Flex, Tag, ConfigProvider } from 'antd';
-import pic from "../assets/img/bubbles_static.png"
-import gif from "../assets/img/bubbles_animated.GIF"
+import { Typography, Flex } from 'antd';
 import { useRef } from 'react';
-import * as motion from "motion/react-client";
-// import { Typography } from '@mui/material';
-import ExpCard from "./ExpCard.js"
 import Experience from './Experience.jsx';
-import Skills from './Skills.jsx';
-import { Box, Grid } from '@mui/material';
+// import Skills from './Skills.jsx';
 
-const { Title, Paragraph, Text } = Typography
+const { Title, Paragraph } = Typography
 
 function HomeIntro() {
     const scrollRef = useRef(null);
-
-    const box = {
-        width: 100,
-        height: 100,
-        backgroundColor: "#9911ff",
-        borderRadius: 5,
-    }
 
     return (
         <div className="homePage">
@@ -42,11 +29,10 @@ function HomeIntro() {
             <Flex className='section exp-section' justify='space-evenly' align='center'>
                 <Experience/>
             </Flex>
-            <Flex className='section skills-section' justify='space-evenly' align='center'>
+            {/* <Flex className='section skills-section' justify='space-evenly' align='center'>
                 <Skills/>
-            </Flex>
+            </Flex> */}
         </div>
-        // </ConfigProvider>
     );
 }
 

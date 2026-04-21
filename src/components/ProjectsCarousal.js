@@ -1,23 +1,19 @@
+/* eslint-disable no-multi-str */
 import React from "react";
 import './ProjectsCarousal.css'
-import ProjectCard from "./ProjectCard";
-import { Button, Card } from 'antd'
+import { Button } from 'antd'
 import { useState } from 'react';
 
-import ProjectImage from '../assets/img/bubbles_static.png'
-import ProjectGIF from '../assets/img/bubbles_animated.GIF'
-import Spade from '../assets/img/2S.jpg'
-import big2 from '../assets/img/Big2_ss.png'
 import steamGamesCover from '../assets/img/steam_games.png'
 import personalShopperCover from '../assets/img/forest.jpg'
 import HarmonicHusttleCover from '../assets/img/Harmonic_Hustle.png'
 import InsightUBCCover from '../assets/img/Insight_UBC.png'
-import Big2Cover from '../assets/img/Big_2.png'
-import GalleryManagerCover from '../assets/img/Gallery_Manager.png'
+// import Big2Cover from '../assets/img/Big_2.png'
+// import GalleryManagerCover from '../assets/img/Gallery_Manager.png'
 
-import demo from '../assets/img/Big2_Demo.mp4'
+// import demo from '../assets/img/Big2_Demo.mp4'
 
-import { Image, Modal } from 'antd'
+import { Modal } from 'antd'
 
 /*  Carousal style referenced from:  https://codepen.io/team/keyframers/pen/rNxmVZN?editors=0100 */
 const slides = [
@@ -186,7 +182,7 @@ function Slide({slide, offset}) {
                         // style={{color: `${slide.color}`, borderColor: `${slide.color}`}} 
                         ghost>{`${slide.linkName}`}</Button>
                 ) : null}
-                {slide.demo != "" ? (
+                {slide.demo !== "" ? (
                     <Button className="demo-btn" id='demo-btn' type="dashed" onClick={showModal} ghost>Demo</Button>
                 ) : null}
                 <Modal
