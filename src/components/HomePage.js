@@ -2,7 +2,7 @@ import './HomePage.css'
 import { Typography, Flex } from 'antd';
 import { useRef } from 'react';
 import Experience from './Experience.jsx';
-import Skills from './Skills.jsx';
+// import Skills from './Skills.jsx';
 
 const { Title, Paragraph } = Typography
 
@@ -29,9 +29,9 @@ function HomeIntro() {
             <Flex className='section exp-section' justify='space-evenly' align='center'>
                 <Experience/>
             </Flex>
-            <Flex className='section skills-section' justify='space-evenly' align='center'>
+            {/* <Flex className='section skills-section' justify='space-evenly' align='center'>
                 <Skills/>
-            </Flex>
+            </Flex> */}
         </div>
     );
 }
