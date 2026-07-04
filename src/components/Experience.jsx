@@ -17,7 +17,8 @@ function Experience() {
                 <Typography variant="h4" component="h1" 
                     sx={{
                         marginBottom: 5,
-                        color: 'white',
+                        // color: 'white',
+                        color: '#F3F4F6',
                         // marginLeft: 5
                     }}
                 >Internships</Typography>

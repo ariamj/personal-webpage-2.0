@@ -14,13 +14,15 @@ function HomeIntro() {
             <Flex className='section intro-section' justify='space-evenly' align='center'>
                 <Flex className='section-inner intro' vertical align='flex-start' justify='center' ref={scrollRef}>
                     <Title className="name">Arianna</Title>
-                    <Title level={3} className="sub-info" italic>New grad UBC Computer Science Major</Title>
-                    <Paragraph className="intro-description">
-                        Hello, welcome to my page! I am a fast learner who enjoys challenging myself to 
+                    <Title level={3} className="sub-info" italic>Aspiring Frontend Developer · CS Graduate (UBC)</Title>
+                    <Paragraph className="intro-description" strong>
+                        Hello, welcome to my page! 
+                        <p />I am a fast learner who enjoys challenging myself to 
                         create unique products that can make an impact. With a 
                         background in arts, it is particularly statisfiable and appreciative to be able to bring a vision 
                         to life. Whether that be in the form of an application, or simply, a nicely done UI.
                     </Paragraph>
+                    <br />
                     <Paragraph>
                         Fun fact: All art used on this site was created by me :)
                     </Paragraph>
