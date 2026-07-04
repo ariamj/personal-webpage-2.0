@@ -24,7 +24,8 @@ function ExpCard(props) {
 					maxWidth: 500,
 					borderRadius: '20px',
 					background: 'none',
-					color: 'white'
+					color: '#F3F4F6'
+					// color: '#9CA3AF'
 				}}
 			>
 				<CardContent>
